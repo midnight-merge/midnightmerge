@@ -3,44 +3,70 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
 <title>Members — Midnight Merge</title>
-<meta name="description" content="Members of Midnight Merge.">
+<meta name="description" content="The people behind Midnight Merge.">
 <link rel="stylesheet" href="style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13'>🌒</text></svg>">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
 <main>
 
-<header class="doc">
-  <h1>Members</h1>
-  <dl class="meta">
-    <dt>Document</dt><dd>Roster</dd>
-    <dt>Status</dt><dd>Living</dd>
-    <dt>Count</dt><dd>3</dd>
-  </dl>
-</header>
+  <header class="masthead">
+    <h1 class="brand">
+      <a class="wordmark" href="/">
+      <svg class="mark" width="46" height="46" viewBox="0 0 32 32" aria-hidden="true">
+        <defs>
+          <linearGradient id="mmFade" x1="0" y1="0.5" x2="0" y2="1">
+            <stop offset="0" stop-color="#fff"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+          </linearGradient>
+          <mask id="mmMask"><rect width="32" height="32" fill="url(#mmFade)"/></mask>
+        </defs>
+        <g mask="url(#mmMask)" fill="none" stroke="currentColor" stroke-width="2.8">
+          <path d="M16 16V32"/>
+          <path d="M28 32C28 23.5 26 17.4 16 16.6"/>
+        </g>
+        <circle cx="16" cy="16" r="5.5" fill="currentColor"/>
+      </svg>
+      <span>midnightmerge.dev</span>
+      </a>
+    </h1>
+    <div class="clock mono" data-clock>
+      <span class="time">--:--:--</span>
+      <span class="note">your local time</span>
+    </div>
+  </header>
 
-<nav class="doc">
-  <a href="/">Projects</a>
-  <a href="/members.html" aria-current="page">Members</a>
-</nav>
 
-<h2><span class="num">1.</span>Roster</h2>
-<div class="entry">
-  <dl class="roster">
-    <dt>Shams</dt><dd>—</dd>
-    <dt>ReyzorQ</dt><dd>—</dd>
-    <dt>Amz30</dt><dd>—</dd>
-  </dl>
-</div>
+  <section>
+    <h2 class="label">Members</h2>
+    <ul class="list">
+      <li>
+        <div class="row">
+          <span class="name">Shams</span>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="name">ReyzorQ</span>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="name">Amz30</span>
+        </div>
+      </li>
+    </ul>
+  </section>
 
-<h2><span class="num">2.</span>Notes</h2>
-<p>Roles and links to be added. Project index: <a href="/">Projects</a>.</p>
-
-<footer class="doc">
-  midnightmerge.dev
-</footer>
+  <footer>
+    <a href="/">Projects</a>
+    <a href="/members.html" aria-current="page">Members</a>
+    <a href="https://github.com/midnight-merge">GitHub</a>
+  </footer>
 
 </main>
+<script src="clock.js"></script>
 </body>
 </html>
