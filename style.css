@@ -225,15 +225,16 @@ footer a[aria-current="page"] { color: var(--text); }
   main { padding: 3rem 1.25rem 4rem; }
   .brand { font-size: 1.02rem; }
 
-  /* the caption is the widest thing in the masthead and the digits speak for
-     themselves — drop it and tighten the gap before anything has to wrap */
+  /* keep the caption — just tighten it up */
   .masthead { gap: 1rem; }
-  .clock .note { display: none; }
+  .clock { font-size: 0.66rem; }
   .clock .time { font-size: 0.88rem; }
   section { margin-top: 2.75rem; }
 }
 
-@media (max-width: 22rem) {
-  .masthead { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+@media (max-width: 30rem) {
+  .masthead { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
   .clock { text-align: left; }
+  .clock .time { display: inline; }
+  .clock .note { margin-left: 0.5rem; }
 }
