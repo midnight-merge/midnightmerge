@@ -231,10 +231,3 @@ footer a[aria-current="page"] { color: var(--text); }
   .clock .time { font-size: 0.88rem; }
   section { margin-top: 2.75rem; }
 }
-
-@media (max-width: 30rem) {
-  .masthead { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
-  .clock { text-align: left; }
-  .clock .time { display: inline; }
-  .clock .note { margin-left: 0.5rem; }
-}
