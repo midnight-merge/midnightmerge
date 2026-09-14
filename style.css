@@ -69,25 +69,7 @@ main {
   margin: 0;
 }
 
-.wordmark {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
-  color: inherit;
-  text-decoration: none;
-}
-
-.mark {
-  flex: none;
-  color: var(--amber);
-  transition: opacity 160ms ease;
-}
-
-/* the dot is geometrically centred, but the tail carries the glyph's visible
-   mass downward — drop the text to the mark's optical centre, not its box centre */
-.wordmark > span { transform: translateY(3px); }
-
-.wordmark:hover .mark { opacity: 0.78; }
+.brand a { color: inherit; text-decoration: none; }
 
 .clock {
   text-align: right;
@@ -206,6 +188,14 @@ a.row:hover .name { color: var(--amber); }
   letter-spacing: 0.04em;
 }
 
+.people {
+  list-style: none;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 2;
+}
+
 /* ---------- footer ---------- */
 
 footer {
@@ -234,7 +224,16 @@ footer a[aria-current="page"] { color: var(--text); }
 @media (max-width: 34rem) {
   main { padding: 3rem 1.25rem 4rem; }
   .brand { font-size: 1.02rem; }
-  .mark { width: 36px; height: 36px; }
-  .wordmark > span { transform: translateY(2px); }
+
+  /* the caption is the widest thing in the masthead and the digits speak for
+     themselves — drop it and tighten the gap before anything has to wrap */
+  .masthead { gap: 1rem; }
+  .clock .note { display: none; }
+  .clock .time { font-size: 0.88rem; }
   section { margin-top: 2.75rem; }
+}
+
+@media (max-width: 22rem) {
+  .masthead { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  .clock { text-align: left; }
 }
